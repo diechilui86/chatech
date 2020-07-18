@@ -92,7 +92,7 @@ body {
 
 .chat__user {
     display: flex;
-    margin: auto 20px;
+    margin-left: 15px;
 }
 
 .chat__username {
@@ -104,7 +104,7 @@ body {
     display: flex;
     align-items: center;
     background: rgba(114, 137, 218, 0.5);
-    padding: 3px 10px;
+    padding: 3px 5px;
     border-radius: 25px;
 }
 
@@ -118,14 +118,17 @@ body {
     border: 0;
     background: rgba(114, 137, 218, 0.4);
     text-decoration: none;
-    padding: 5px 25px;
     border-radius: 25px;
-    margin: auto 20px;
+    margin-right: 20px;
     font-size: 1em;
 }
 
 .chat__logout:hover {
     background: rgba(114, 137, 218, 0.5);
+}
+
+.chat__logout:hover .icon.icon-close {
+    color: rgba(255,255,255);
 }
 
 .chat__messages {
@@ -180,9 +183,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0px 20px;
+    align-items: center;
+    width: 100%;
     height: 120px; 
     background-color: #36393f;
+}
+
+.chat__message-form {
+    width: 90%;
 }
 
 .chat__user-message {
@@ -198,7 +206,7 @@ body {
     line-height: 1.2em;
     outline: none;
     resize: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     box-sizing: border-box;
     border: 0;
     display: block;
@@ -228,6 +236,7 @@ body {
     height: 20px;
     display: flex;
     align-items: center;
+    width: 90%;
 }
 
 .chat__notice--typing {
@@ -342,7 +351,7 @@ body {
     border-bottom: 4px solid #735336;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 480px) {
     .login__window {
         width: 250px; 
     }
