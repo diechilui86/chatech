@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/assets/icomoon/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="chat__container">
+        <div class="chat">
+            <div class="chat__header">
+                <div class="chat__info">
+                    <div class="chat__user">
+                        <span class="icon icon-user"></span>
+                        <h3 id="chat-user" class="chat__username"></h3>
+                    </div>
+                    <div class="chat__users">
+                        <span class="icon icon-users"></span>
+                        <span id="users-count" class="chat__users-count"></span>
+                    </div>
+                    <button id="logout-button" class="chat__logout">Salir</button>
+                </div>
+                <div id="header-notice" class="chat__header-notice"></div>
+            </div>
+            <div class="chat__messages">
+                <div id="chat-messages"></div>
+            </div>
+            <div class="chat__footer">
+                <form id="chat-form">
+                    <div class="chat__user-message">
+                        <textarea id="user-message" class="chat__user-message-text" form="chat-form" rows="1"  placeholder="Escribe tu mensaje aquí"></textarea>
+                        <span id="emojis-button" class="icon icon-emoji"></span>
+                        <span id="send-button" class="icon icon-send"></span>
+                    </div>
+                </form>
+                <div id="footer-notice" class="chat__footer-notice"></div>
+            </div>
+        </div>
+        <div id="login-container" class="login">
+            <div class="login__window">
+                <h1 class="login__title">¡Bienvenido!</h1>
+                <h2 class="login__notice">Elige un color y escribe tu nombre para que otros sepan quién eres</h2>
+                <div class="login__colors">
+                    <div class="login__color login__color--red">
+                        <input id="color-red" class="login__color-radio" type="radio" name="color" value="#BF1200" form="login-form">
+                    </div>
+                    <div class="login__color login__color--blue">
+                        <input id="color-blue" class="login__color-radio" type="radio" name="color" value="#0099FF" form="login-form">
+                    </div>
+                    <div class="login__color login__color--yellow">
+                        <input id="color-yellow" class="login__color-radio" type="radio" name="color" value="#FFCF19" form="login-form">
+                    </div>
+                    <div class="login__color login__color--green">
+                        <input id="color-green" class="login__color-radio" type="radio" name="color" value="#027313" form="login-form">
+                    </div>
+                    <div class="login__color login__color--brown">
+                        <input id="color-brown" class="login__color-radio" type="radio" name="color" value="#735336" form="login-form">
+                    </div>
+                </div>
+                <form id="login-form" class="login__form">
+                    <label for="username">Nombre</label>
+                    <input id="username" class="login__username" type="text" form="login-form" autocomplete="off">
+                    <button class="login__button">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-button@latest/dist/index.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="./js/log.js" charset="utf-8"></script>
+    <script src="./js/chat.js" charset="utf-8"></script>
+</body>
+</html>
